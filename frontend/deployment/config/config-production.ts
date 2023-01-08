@@ -1,7 +1,7 @@
 /**
  * Add your live production URL here
  */
-const HOSTED_URL = 'https://public.domain.com';
+const HOSTED_URL = 'https://www.openm8.org/';
 
 const configProduction = {
   HOSTED_URL,
