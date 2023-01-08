@@ -1,7 +1,7 @@
 /**
  * Add your hosted dev URL here
  */
-const HOSTED_URL = 'https://dev.domain.com';
+const HOSTED_URL = 'https://www.openm8.org/';
 
 const configDevelopment = {
   HOSTED_URL,
