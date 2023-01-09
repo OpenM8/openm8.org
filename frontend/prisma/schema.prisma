@@ -1,0 +1,94 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mongodb"
+  url      = env("DATABASE_URL")
+}
+
+model MenuItem {
+  id        String         @id @default(auto()) @map("_id") @db.ObjectId
+  dropdown  DropdownItem[]
+  name      String
+  url       String
+  createdAt DateTime       @default(now())
+  updatedAt DateTime       @updatedAt
+}
+
+model DropdownItem {
+  id         String   @id @default(auto()) @map("_id") @db.ObjectId
+  menuItem   MenuItem @relation(fields: [menuItemId], references: [id])
+  menuItemId String   @db.ObjectId
+  name       String
+  url        String
+  createdAt  DateTime @default(now())
+  updatedAt  DateTime @updatedAt
+}
+
+model News {
+  id        String   @id @default(auto()) @map("_id") @db.ObjectId
+  img       String
+  title     String
+  subtitle  String
+  url       String   @unique
+  content   String
+  createdBy String
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model DevUpdates {
+  id        String   @id @default(auto()) @map("_id") @db.ObjectId
+  img       String
+  title     String
+  url       String   @unique
+  content   String
+  createdBy String
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model FooterItem {
+  id        String          @id @default(auto()) @map("_id") @db.ObjectId
+  subitems  FooterSubitem[]
+  socials   FooterSocial[]
+  name      String
+  createdAt DateTime        @default(now())
+  updatedAt DateTime        @updatedAt
+}
+
+model FooterSubitem {
+  id           String     @id @default(auto()) @map("_id") @db.ObjectId
+  footerItem   FooterItem @relation(fields: [footerItemId], references: [id])
+  footerItemId String     @db.ObjectId
+  name         String
+  url          String
+  createdAt    DateTime   @default(now())
+  updatedAt    DateTime   @updatedAt
+}
+
+model FooterSocial {
+  id           String     @id @default(auto()) @map("_id") @db.ObjectId
+  footerItem   FooterItem @relation(fields: [footerItemId], references: [id])
+  footerItemId String     @db.ObjectId
+  name         String
+  url          String
+  createdAt    DateTime   @default(now())
+  updatedAt    DateTime   @updatedAt
+}
+
+model SiteInfo {
+  id         String   @id @default(auto()) @map("_id") @db.ObjectId
+  title      String
+  address    String
+  logodark   String
+  logolight  String
+  footertext String
+  version    String
+  createdAt  DateTime @default(now())
+  updatedAt  DateTime @updatedAt
+}
