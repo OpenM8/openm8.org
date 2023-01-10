@@ -12,12 +12,7 @@ export const basePolicy = new aws.iam.Policy('base-policy', {
       {
         Action: [
           'dynamodb:*',
-          'ses:*',
           's3:*',
-          'sqs:*',
-          'cognito-identity:*',
-          'cognito-idp:*',
-          'cognito-sync:*',
           'appsync:GraphQL',
           'lambda:InvokeFunction',
           'lambda:InvokeAsync',

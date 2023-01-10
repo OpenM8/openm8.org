@@ -1,0 +1,20 @@
+type Query {
+    getMenuItems: MenuItem[]
+    getCount: Int
+    getMenuItem: MenuItem
+}
+
+type Mutation {
+    createMenuItem(name: String!, uri: String!, order: Int!, parent: ID): MenuItem
+    updateMenuItem(id: ID!, name: String!, uri: String!, order: Int!, parent: ID): MenuItem
+    deleteMenuItem(id: ID!): MenuItem
+}
+
+type MenuItem {
+    id: ID!
+    name: String!
+    uri: String!
+    order: Int!
+    parent: MenuItem
+    children: [MenuItem]
+}

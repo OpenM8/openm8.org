@@ -1,4 +1,5 @@
-
+{
+    "compilerOptions": {
       "target": "es2017",
       "module": "commonjs",
       "lib": ["es2017", "es2019", "es2020", "DOM"],
@@ -11,10 +12,5 @@
       "skipLibCheck": true,
       "resolveJsonModule": true
     },
-    "include": [
-        "src/**/*.ts",
-        "src/.d.ts",
-        "index.ts",
-        "resources/**/*.ts"
-    ]
+    "include": ["./*.ts", "utils/.d.ts"]
 }
