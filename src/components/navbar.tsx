@@ -17,7 +17,7 @@ import {
   Container,
   Badge,
 } from "@chakra-ui/react";
-import { MdLightMode, MdDarkMode, MdChevronRight, MdArrowDropDown} from "react-icons/md";
+import { MdLightMode, MdDarkMode, MdChevronRight, MdArrowDropDown, MdClose, MdMenu } from "react-icons/md";
 import ReactRouterLink from "next/link";
 import { useEffect, useState } from "react";
 
@@ -61,7 +61,7 @@ export default function Navbar() {
           <Flex display={{ base: "flex", md: "none" }}>
             <IconButton
               onClick={onToggle}
-              icon={isOpen ? "<Icon icon='material-symbols:close' />" as any : "<Icon icon='material-symbols:close' />" as any}
+              icon={isOpen ? <MdMenu/> : <MdClose/>}
               variant={"ghost"}
               aria-label={"Toggle Navigation"}
             />
