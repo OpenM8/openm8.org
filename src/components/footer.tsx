@@ -2,7 +2,6 @@ import {
   Box,
   chakra,
   Container,
-  Link,
   Flex,
   Image,
   Text,
