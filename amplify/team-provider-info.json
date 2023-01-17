@@ -1,0 +1,23 @@
+{
+  "staging": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-openm8org-staging-113751-authRole",
+      "UnauthRoleArn": "arn:aws:iam::797991506191:role/amplify-openm8org-staging-113751-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::797991506191:role/amplify-openm8org-staging-113751-authRole",
+      "Region": "eu-west-1",
+      "DeploymentBucketName": "amplify-openm8org-staging-113751-deployment",
+      "UnauthRoleName": "amplify-openm8org-staging-113751-unauthRole",
+      "StackName": "amplify-openm8org-staging-113751",
+      "StackId": "arn:aws:cloudformation:eu-west-1:797991506191:stack/amplify-openm8org-staging-113751/605e0c40-965b-11ed-ad01-02486c88cb27",
+      "AmplifyAppId": "d3a2qgnzp2ugfk"
+    },
+    "categories": {
+      "hosting": {
+        "amplifyhosting": {
+          "appId": "d3a2qgnzp2ugfk",
+          "type": "cicd"
+        }
+      }
+    }
+  }
+}
