@@ -14,7 +14,7 @@ import { ReactNode } from "react";
 import { FaTwitter, FaGithub, FaDiscord, FaHeart } from "react-icons/fa";
 import { MdSend } from "react-icons/md";
 
-const Logo = (props: any) => {
+const Logo = (_props: any) => {
   return (
     <Image
       src={useColorModeValue(
